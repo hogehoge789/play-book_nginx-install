@@ -1,2 +1,14 @@
 ---
 # tasks file for nginx-service
+
+- name: EPEL Repository Install
+  yum:
+    name: nginx
+    state: present
+
+- naem: Nginx Service Start
+  service:
+    name: nginx
+    state: started
+    enabled: true
+
