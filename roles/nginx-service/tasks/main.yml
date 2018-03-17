@@ -3,6 +3,11 @@
 
 - name: EPEL Repository Install
   yum:
+   name: epel-release
+   state: present
+
+- name: Nginx Install
+  yum:
     name: nginx
     state: present
 
